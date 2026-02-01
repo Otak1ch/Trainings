@@ -1,0 +1,49 @@
+.counter{
+    background-color: white;
+    width: 410px;
+    align-items: center;
+    border-radius: 11px;
+    text-align: center;
+    justify-content: center;
+}
+
+h1{
+  text-align: center;
+}
+
+.button1, .button2 {
+    width: 200px;
+    height: 70px;
+    font-size: 20px;            
+    border-radius: 11px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.button1 {
+    background-color: green;
+}
+
+.button2 {
+    background-color: red;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.container > div:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.text {
+    font-size: 40px;
+}
