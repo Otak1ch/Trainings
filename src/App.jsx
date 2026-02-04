@@ -1,8 +1,19 @@
-import { useState } from 'react'
+import { useState, useEffect, use } from 'react'
 import './App.css'
-
+const checkNumber = (num) => {
+  if (num % 2 === 0) {
+    return num*2
+}
+else { return (num-1)*2}
+}
+  
 function App() {
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(0) 
+  useEffect(() => {
+    console.log('Значение изменилось:', checkNumber(value));
+  }, [checkNumber(value)])
+
+
 
   return (
     
@@ -12,11 +23,12 @@ function App() {
   <div className="main-container">
     <div className="counter">
       <p className="text">{value}</p>
+      <p className='text'>{checkNumber(value)}</p>
     </div>
 
     <div className="buttons-container">
-      <button onClick={() => setValue(value + 1)} className="button1">+</button>
-      <button onClick={() => setValue(value - 1)} className="button2">-</button>
+      <button onClick={() => setValue(prev => prev + 1)} className="button1">+</button>
+      <button onClick={() => setValue(prev => prev - 1)} className="button2">-</button>
     </div>
   </div>
 </div>
