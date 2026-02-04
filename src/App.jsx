@@ -6,7 +6,9 @@ const checkNumber = (num) => {
 }
 else { return (num-1)*2}
 }
-  
+
+
+
 function App() {
   const [value, setValue] = useState(0) 
   useEffect(() => {
@@ -19,11 +21,10 @@ function App() {
     
 <div className="page">
   <h1>СЧЁТЧИК</h1>
-
   <div className="main-container">
-    <div className="counter">
-      <p className="text">{value}</p>
-      <p className='text'>{checkNumber(value)}</p>
+    <div className='counter'>
+      <p>{value}</p>
+      <p>{checkNumber(value)}</p>
     </div>
 
     <div className="buttons-container">
